@@ -5,10 +5,12 @@
 let app = new Vue({
     el: "#app",
     data:{
-        numeroRandom: "",
+        numeri: [],
+ 
     },
 
-    mounted(){
+    methods:{
+        numero(){
             axios.get("https://flynn.boolean.careers/exercises/api/random/int")
             .then(response =>{
                 //verifico lo stato della risposta
@@ -16,11 +18,11 @@ let app = new Vue({
                 //stampo su console un numero random da 1 a 9
                 console.log(response.data.response);  
                 const numero = response.data.response;
-                this.numeroRandom = numero
-                
-
+                this.numeri.push(numero)
             }) 
-    },
+        },
+     
+    }
 
 
 });
