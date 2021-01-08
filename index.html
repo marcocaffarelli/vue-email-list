@@ -5,9 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>vue-email-list</title>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding:0;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            li{
+                list-style: none;
+                font-size: 25px;
+                padding: 5px 0;
+            } 
+        </style>
     </head>
     <body>
         <div id="app">
+            <!-- titolo -->
+            <h1>LISTA E-MAIL</h1>
+            <!-- lista e-mail -->
+            <ul>
+                <li v-for="email in listaEmail">{{email}}</li>
+            </ul>
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
