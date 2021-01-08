@@ -5,7 +5,7 @@
 let app = new Vue({
     el: "#app",
     data:{
-        numeri: [],
+        numeri: [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,],
  
     },
 
@@ -18,7 +18,7 @@ let app = new Vue({
                 //stampo su console un numero random da 1 a 9
                 console.log(response.data.response);  
                 const numero = response.data.response;
-                this.numeri.push(numero)
+                this.numeri.splice(35,1) && this.numeri.unshift(numero)
             });
         },
     }

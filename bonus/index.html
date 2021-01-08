@@ -14,7 +14,8 @@
             <div class="container" @click="numero">
                 <template v-for="(numero, index) in numeri">
                     <div class="square green" v-if="numero>5"><div>{{numero}}</div></div>
-                    <div class="square yellow" v-if="numero<=5"><div>{{numero}}</div></div>
+                    <div class="square yellow" v-if="numero>0 && numero<=5"><div>{{numero}}</div></div>
+                    <div class="square" v-if="numero == null"></div>
                 </template>
             </div>
         </div>
