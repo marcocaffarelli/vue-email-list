@@ -19,9 +19,8 @@ let app = new Vue({
                 console.log(response.data.response);  
                 const numero = response.data.response;
                 this.numeri.push(numero)
-            }) 
+            });
         },
-     
     }
 
 

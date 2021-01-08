@@ -12,7 +12,10 @@
         
         <div id="app">
             <div class="container" @click="numero">
-                <div v-for="(numero, index) in numeri" class="square" >{{numero}}</div>
+                <template v-for="(numero, index) in numeri">
+                    <div class="square green" v-if="numero>5"><div>{{numero}}</div></div>
+                    <div class="square yellow" v-if="numero<=5"><div>{{numero}}</div></div>
+                </template>
             </div>
         </div>
         

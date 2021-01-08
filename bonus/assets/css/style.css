@@ -14,5 +14,19 @@
 .square{
     height: calc(100%/6);
     width: calc(100%/6);
-    border: 1px solid black;
+    border: 5px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.green{
+    background-color: green;
+
+}
+.yellow{
+    background-color: yellow;
+
 }
