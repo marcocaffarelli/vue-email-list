@@ -6,4 +6,13 @@ let app = new Vue({
     data:{
 
     },
+    mounted(){
+        axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+        .then(response =>{
+            //verifico lo stato della risposta
+            //console.log(response);
+            //stampo su console un email random
+            console.log(response.data.response);
+        })
+    }
 });
